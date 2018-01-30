@@ -1,0 +1,2 @@
+- [fmt - The Go Programming Language](https://golang.org/pkg/fmt/)
+- [Go by Example: String Formatting](https://gobyexample.com/string-formatting)
