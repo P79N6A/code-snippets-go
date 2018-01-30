@@ -1,5 +1,11 @@
 # code-snippets-go
 
+## Why
+
+原因类似另一个项目 👉 [binderclip/code-snippets-python: 日常 Python 代码收集](https://github.com/binderclip/code-snippets-python)。
+
+Python 的那个感觉挺好的，所以这次从一开始学 Go 就开始收集（项目走到哪儿，我就学到了哪儿）。
+
 
 ## 学习资源
 
