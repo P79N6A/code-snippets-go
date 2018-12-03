@@ -1,7 +1,8 @@
 package main
 
 import "fmt"
+import "math"
 
 func main() {
-	fmt.Println("Hello, Go")
+	fmt.Println(math.Pi)
 }
