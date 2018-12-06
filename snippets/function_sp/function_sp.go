@@ -11,12 +11,20 @@ func minus(x, y int) int {
 	return x - y
 }
 
+// multiple results
 func swap(x, y string) (string, string) {
 	return y, x
 }
 
 func swapInt(x, y int) (int, int) {
 	return y, x
+}
+
+// named return values
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
 }
 
 func main() {
@@ -27,4 +35,6 @@ func main() {
 	fmt.Println(a, b)
 	c, d := swapInt(1, 2)
 	fmt.Println(c, d)
+
+	fmt.Println(split(17))
 }
