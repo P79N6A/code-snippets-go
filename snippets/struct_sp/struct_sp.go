@@ -15,4 +15,7 @@ func main() {
 	v.X = 10
 	fmt.Println(v)
 	fmt.Println(v.X)
+
+	v2 := Vertex{X: 11}
+	fmt.Println(v2)
 }
