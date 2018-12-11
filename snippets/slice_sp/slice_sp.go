@@ -134,6 +134,48 @@ func sliceOfSlice2() {
 	}
 }
 
+func appendSlice() {
+	fmt.Println("=== appendSlice ===")
+	var s []int
+	printSlice(s)
+
+	s1 := append(s, 1)
+	printSlice(s1)
+
+	s2 := append(s1, 2, 3, 4)
+	printSlice(s2)
+
+	s3 := s2[:2]
+	printSlice(s3)
+
+	s4 := append(s3, 5)
+	s4[0] = 6
+	printSlice(s4)
+	printSlice(s2) // 发现 s4 append 的 5 是覆盖了 s2 中的 3
+
+	s5 := append(s4, 7, 8, 9) // 超出了 cap
+	s5[0] = 10
+	printSlice(s5)
+	printSlice(s2) // s2 已经和 s5 没有关系了
+}
+
+func rangeOfSlice() {
+	fmt.Println("=== rangeOfSlice ===")
+	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+
+	var pow2 = make([]int, 10)
+	for i := range pow2 {
+		pow2[i] = 1 << uint(i) // == 2**i
+	}
+	for _, v := range pow2 {
+		fmt.Println(v)
+	}
+}
+
 func main() {
 	createSliceFromArray()
 	createSliceFromLiterals()
@@ -143,4 +185,6 @@ func main() {
 	makingSlice()
 	sliceOfSlice1()
 	sliceOfSlice2()
+	appendSlice()
+	rangeOfSlice()
 }
