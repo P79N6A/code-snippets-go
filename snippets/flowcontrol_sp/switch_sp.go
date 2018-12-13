@@ -53,8 +53,22 @@ func switchThree() {
 	}
 }
 
+func switchMultipleValueCases() {
+	fmt.Println("=== switchMultipleValueCases ===")
+	id := 10
+	switch id {
+	case 10, 12, 14:
+		fmt.Println("Even")
+	case 11, 13, 15:
+		fmt.Println("Odd")
+	}
+}
+
 func main() {
 	switchOne()
 	switchTwo()
 	switchThree()
+	switchMultipleValueCases()
 }
+
+// https://www.dotnetperls.com/switch-go
