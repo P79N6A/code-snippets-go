@@ -24,10 +24,24 @@ func pow(x, n, lim float64) float64 {
 	return lim
 }
 
+func elseIf(a int) {
+	if a < 0 {
+		fmt.Println("(-∞, 0)")
+	} else if a < 2 {
+		fmt.Println("[0, 2)")
+	} else {
+		fmt.Println("[2, +∞)")
+	}
+}
+
 func main() {
 	fmt.Println(sqrt(2), sqrt(-3))
 	fmt.Println(
 		pow(3, 2, 10),
 		pow(3, 3, 20),
 	)
+
+	elseIf(-5)
+	elseIf(1)
+	elseIf(10)
 }
