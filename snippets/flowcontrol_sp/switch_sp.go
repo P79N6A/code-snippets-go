@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-func switchOne() {
-	fmt.Println("=== switchOne ===")
+func switchCase() {
+	fmt.Println("=== switchCase ===")
 	fmt.Print("Go runs on: ")
 	// switch 的 case 都包含了 break
 	// case 项不一定是常量和数字，可以放一个表达式
@@ -21,8 +21,8 @@ func switchOne() {
 	}
 }
 
-func switchTwo() {
-	fmt.Println("=== switchTwo ===")
+func switchOrder() {
+	fmt.Println("=== switchOrder ===")
 	today := time.Now().Weekday()
 	// fmt.Println(time.Sunday)
 	// fmt.Println(int(time.Sunday))
@@ -40,8 +40,8 @@ func switchTwo() {
 	}
 }
 
-func switchThree() {
-	fmt.Println("=== switchThree ===")
+func switchCaseExpression() {
+	fmt.Println("=== switchCaseExpression ===")
 	t := time.Now()
 	switch {
 	case t.Hour() < 12:
@@ -65,9 +65,9 @@ func switchMultipleValueCases() {
 }
 
 func main() {
-	switchOne()
-	switchTwo()
-	switchThree()
+	switchCase()
+	switchOrder()
+	switchCaseExpression()
 	switchMultipleValueCases()
 }
 
