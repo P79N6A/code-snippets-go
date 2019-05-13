@@ -26,3 +26,5 @@ func main() {
 		fmt.Println("i2: ", i)
 	}
 }
+
+// https://gfw.go101.org/article/line-break-rules.html
