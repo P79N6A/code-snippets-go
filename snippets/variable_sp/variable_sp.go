@@ -14,7 +14,7 @@ func main() {
 	var i int
 	fmt.Println(i, c, python, java)
 
-	var i2, j2 int = 1, 2
+	var i2, j2 = 1, 2
 	fmt.Println(i2, j2, c2, python2, java2)
 
 	// short variable declarations，可以省略 var
