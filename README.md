@@ -12,3 +12,4 @@ Python 的那个感觉挺好的，所以这次从一开始学 Go 就开始收集
 - 代码示例集：[Go by Example](https://gobyexample.com/)
 - [入门 Go 编写应用 · 语雀](https://yuque.com/huacnlee/notes/hello-go)
 - [Where to Go from here...](https://tour.golang.org/concurrency/11)
+- [Go语言101 - Go语言101](https://gfw.go101.org/article/101.html)
