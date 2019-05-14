@@ -7,3 +7,5 @@ func main() {
 	fmt.Println(a, 'a', '\141', '\x61', '\u0061', '\U00000061')
 	fmt.Println('\u4f17', '众')
 }
+
+// https://gfw.go101.org/article/basic-types-and-value-literals.html

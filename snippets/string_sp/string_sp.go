@@ -12,3 +12,5 @@ func main() {
 1 2 1`)
 	// 但是 `` 中不能用转义符
 }
+
+// https://gfw.go101.org/article/basic-types-and-value-literals.html
