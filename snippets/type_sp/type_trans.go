@@ -6,12 +6,12 @@ func main() {
 	// 一些可以转换的
 
 	fmt.Println(complex128(1 + -1e-1000i)) // 精度不够，被舍弃
-	fmt.Println(float32(0.49999999)) // 同样被舍弃
+	fmt.Println(float32(0.49999999))       // 同样被舍弃
 	fmt.Println(float32(17000000000000000))
 	fmt.Println(float32(123))
 	fmt.Println(uint(1.0))
 
-	fmt.Println(int16(6+0i))
+	fmt.Println(int16(6 + 0i))
 	fmt.Println(complex128(789))
 
 	fmt.Println(string(65))

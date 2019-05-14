@@ -9,8 +9,7 @@ func main() {
 	}
 	i := 0
 	// for 没有最后一项时可以不同行跟 {
-	for
-	{
+	for {
 		fmt.Printf("i1: %d\n", i)
 		i++
 		if i > 5 {
@@ -19,10 +18,7 @@ func main() {
 	}
 	i = 0
 	// 由于自动插入行末的 ; 所以可以写成下面的
-	for
-	;
-	i < 6
-	i++ {
+	for ; i < 6; i++ {
 		fmt.Println("i2: ", i)
 	}
 }

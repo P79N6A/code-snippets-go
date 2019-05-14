@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	type status bool // status 和 bool 不是同一种类型
+	type status bool    // status 和 bool 不是同一种类型
 	type boolean = bool // boolean 和 bool 是同一种类型
 	var s status = true
 
