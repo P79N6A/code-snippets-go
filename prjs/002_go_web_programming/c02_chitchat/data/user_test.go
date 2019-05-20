@@ -122,7 +122,6 @@ func Test_GetSession(t *testing.T) {
 	}
 }
 
-
 func Test_checkValidSession(t *testing.T) {
 	setup()
 	if err := users[0].Create(); err != nil {
@@ -171,7 +170,7 @@ func Test_DeleteSession(t *testing.T) {
 	if err != nil {
 		t.Error(err, "Cannot delete session")
 	}
-	s := Session{Uuid:session.Uuid}
+	s := Session{Uuid: session.Uuid}
 	valid, err := s.Check()
 	if err == nil {
 		t.Error(err, "Session is valid even though deleted")

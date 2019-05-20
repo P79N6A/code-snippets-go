@@ -8,10 +8,9 @@ import (
 
 type Product struct {
 	gorm.Model
-	Code string
+	Code  string
 	Price uint
 }
-
 
 func main() {
 	db, err := gorm.Open("sqlite3", "test.db")
