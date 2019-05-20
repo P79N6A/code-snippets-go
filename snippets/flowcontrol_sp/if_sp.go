@@ -32,6 +32,9 @@ func elseIf(a int) {
 	} else {
 		fmt.Println("[2, +∞)")
 	}
+	if (a == 10) || (a == 20) {
+		fmt.Println("10 or 20")
+	}
 }
 
 func main() {
@@ -44,4 +47,5 @@ func main() {
 	elseIf(-5)
 	elseIf(1)
 	elseIf(10)
+	elseIf(15)
 }
