@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func adder() func(int) int {
-	sum := 0 // sum 的值将会存在与返回的函数中
+	sum := 0 // sum 的值将会存在于返回的函数中
 	return func(x int) int {
 		sum += x
 		return sum
