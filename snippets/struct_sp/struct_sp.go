@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/binderclip/code-snippets-go/utils"
+)
 
 // Vertex 向量
 type Vertex struct {
@@ -9,13 +12,21 @@ type Vertex struct {
 	Name string
 }
 
-func main() {
-	v := Vertex{1, 2, "a"}
-	fmt.Println(v)
-	v.X = 10
-	fmt.Println(v)
-	fmt.Println(v.X)
+func vertex1() {
+	utils.PrintFuncName()
+	v1 := Vertex{1, 2, "a"}
+	fmt.Println(v1)
+	v1.X = 10
+	fmt.Println(v1)
+	fmt.Println(v1.X)
 
 	v2 := Vertex{X: 11}
 	fmt.Println(v2)
+
+	v3 := Vertex{}
+	fmt.Println(v3)
+}
+
+func main() {
+	vertex1()
 }

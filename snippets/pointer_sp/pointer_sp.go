@@ -10,6 +10,14 @@ type Vertex struct {
 	Y int
 }
 
+func swapVertex1(v Vertex) {
+	v.X, v.Y = v.Y, v.X
+}
+
+func swapVertex2(v *Vertex) {
+	v.X, v.Y = v.Y, v.X
+}
+
 func pointer1() {
 	fmt.Println("=== pointer1 ===")
 	i, j := 42, 2701
@@ -24,8 +32,18 @@ func pointer1() {
 	fmt.Println(j) // see the new value of j
 
 	v := Vertex{1, 2}
+	fmt.Println(v)
+	v1 := v
+	v1.X = 210
+	fmt.Println(v1)
+	fmt.Println(v)
 	p2 := &v
 	p2.X = 420
+	fmt.Println(v)
+
+	swapVertex1(v)
+	fmt.Println(v)
+	swapVertex2(&v)
 	fmt.Println(v)
 }
 
