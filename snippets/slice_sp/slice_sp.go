@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"github.com/binderclip/code-snippets-go/utils"
 	"strings"
 )
 
 func createSliceFromArray() {
-	fmt.Println("=== createSliceFromArray ===")
+	utils.PrintFuncName()
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 
 	var s []int = primes[1:4]
@@ -22,7 +23,7 @@ func createSliceFromArray() {
 }
 
 func createSliceFromLiterals() {
-	fmt.Println("=== createSliceFromLiterals ===")
+	utils.PrintFuncName()
 	q := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println(q)
 
@@ -44,7 +45,7 @@ func createSliceFromLiterals() {
 }
 
 func sliceDefault() {
-	fmt.Println("=== sliceDefault ===")
+	utils.PrintFuncName()
 	s := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println(s)
 	fmt.Println(s[0:6])
@@ -61,7 +62,7 @@ func printSlice(s []int) {
 }
 
 func sliceLenCap() {
-	fmt.Println("=== sliceLenCap ===")
+	utils.PrintFuncName()
 	s := []int{2, 3, 5, 7, 11, 13}
 	printSlice(s)
 
@@ -79,7 +80,7 @@ func sliceLenCap() {
 }
 
 func nilSlice() {
-	fmt.Println("=== nilSlice ===")
+	utils.PrintFuncName()
 	var s []int
 	fmt.Println(s, len(s), cap(s))
 	if s == nil {
@@ -88,7 +89,7 @@ func nilSlice() {
 }
 
 func makingSlice() {
-	fmt.Println("=== makingSlice ===")
+	utils.PrintFuncName()
 	a := make([]int, 5)
 	printSlice(a)
 	b := make([]int, 1, 5)
@@ -100,7 +101,7 @@ func makingSlice() {
 }
 
 func sliceOfSlice1() {
-	fmt.Println("=== sliceOfSlice1 ===")
+	utils.PrintFuncName()
 	// Create a tic-tac-toe board.
 	board := [][]string{
 		[]string{"_", "_", "_"},
@@ -120,7 +121,7 @@ func sliceOfSlice1() {
 }
 
 func sliceOfSlice2() {
-	fmt.Println("=== sliceOfSlice2 ===")
+	utils.PrintFuncName()
 	// 长度是可以不同的
 	sos := [][]string{
 		[]string{">"},
@@ -134,8 +135,8 @@ func sliceOfSlice2() {
 	}
 }
 
-func appendSlice() {
-	fmt.Println("=== appendSlice ===")
+func sliceAppend() {
+	utils.PrintFuncName()
 	var s []int
 	printSlice(s)
 
@@ -159,30 +160,46 @@ func appendSlice() {
 	printSlice(s2) // s2 已经和 s5 没有关系了
 }
 
+func sliceAppendSlice() {
+	utils.PrintFuncName()
+	s1 := []int{1, 2, 3}
+	s2 := []int{100, 200, 300}
+	s3 := append(s1, s2...)
+	fmt.Println(s1)
+	fmt.Println(s3)
+}
+
+func copySlice() {
+	utils.PrintFuncName()
+	s1 := []int{1, 2, 3}
+	var s2 []int
+	copy(s2, s1)
+	fmt.Println(s2)
+
+	s3 := make([]int, 2)
+	copy(s3, s1)
+	fmt.Println(s3)
+
+	s4 := make([]int, 4)
+	copy(s4, s1)
+	fmt.Println(s4)
+}
+
 func rangeOfSlice() {
-	fmt.Println("=== rangeOfSlice ===")
+	utils.PrintFuncName()
 	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
 
 	for i, v := range pow {
 		fmt.Printf("2**%d = %d\n", i, v)
 	}
 
-	var pow2 = make([]int, 10)
+	var pow2 = make([]int, 3)
 	for i := range pow2 {
 		pow2[i] = 1 << uint(i) // == 2**i
 	}
 	for _, v := range pow2 {
 		fmt.Println(v)
 	}
-
-	var pow3 [10]int // ??? 这个好像是 array 而不是 slice？
-	for i := range pow3 {
-		pow3[i] = 1 << uint(i) // == 2**i
-	}
-	for _, v := range pow3 {
-		fmt.Println(v)
-	}
-
 }
 
 func main() {
@@ -194,6 +211,8 @@ func main() {
 	makingSlice()
 	sliceOfSlice1()
 	sliceOfSlice2()
-	appendSlice()
+	sliceAppend()
+	sliceAppendSlice()
+	copySlice()
 	rangeOfSlice()
 }

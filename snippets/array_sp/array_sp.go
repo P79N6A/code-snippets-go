@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/binderclip/code-snippets-go/utils"
+)
 
 func array1() {
-	fmt.Println("=== array1 ===")
+	utils.PrintFuncName()
 	var b [3]string
 	b[1] = "ho"
 	fmt.Println(b)
@@ -18,25 +21,27 @@ func array1() {
 	fmt.Println(primes)
 	fmt.Println(len(primes))
 
-	nums := []int{1, 3, 5}
-	fmt.Println(nums)
-	fmt.Println(len(nums))
-
 	// fmt.Println(primes[7]) // invalid array index 7 (out of bounds for 6-element array)
 
 	// i := 7
 	// fmt.Println(primes[i]) // panic: runtime error: index out of range
 }
 
-func arrayModify(arr []int) {
+func arrayModify1(arr [3]int) {
+	arr[0] = 8
+}
+
+func arrayModify2(arr *[3]int) {
 	arr[0] = 8
 }
 
 func array2() {
-	fmt.Println("=== array2 ===")
-	arr := []int{1, 2, 3}
+	utils.PrintFuncName()
+	arr := [3]int{1, 2, 3}
 	fmt.Println(arr)
-	arrayModify(arr)
+	arrayModify1(arr)
+	fmt.Println(arr)
+	arrayModify2(&arr)
 	fmt.Println(arr)
 }
 
@@ -44,3 +49,7 @@ func main() {
 	array1()
 	array2()
 }
+
+// https://tour.golang.org/moretypes/6
+// https://gobyexample.com/arrays
+// slice 用的更多，array 定义的时候就 [] 中就确定了数字，slice 则没有
