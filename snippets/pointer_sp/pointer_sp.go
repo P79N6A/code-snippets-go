@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Vertex 向量
 type Vertex struct {
@@ -8,7 +10,8 @@ type Vertex struct {
 	Y int
 }
 
-func main() {
+func pointer1() {
+	fmt.Println("=== pointer1 ===")
 	i, j := 42, 2701
 
 	p := &i         // point to i
@@ -24,4 +27,26 @@ func main() {
 	p2 := &v
 	p2.X = 420
 	fmt.Println(v)
+}
+
+func swap1(a int, b int) (int, int) {
+	return b, a
+}
+
+func swap2(a *int, b *int) {
+	*a, *b = *b, *a
+}
+
+func pointer2() {
+	fmt.Println("=== pointer2 ===")
+	a, b := 1, 2
+	fmt.Println(swap1(a, b))
+	fmt.Println(a, b)
+	swap2(&a, &b)
+	fmt.Println(a, b)
+}
+
+func main() {
+	pointer1()
+	pointer2()
 }
