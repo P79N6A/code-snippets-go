@@ -174,6 +174,15 @@ func rangeOfSlice() {
 	for _, v := range pow2 {
 		fmt.Println(v)
 	}
+
+	var pow3 [10]int // ??? 这个好像是 array 而不是 slice？
+	for i := range pow3 {
+		pow3[i] = 1 << uint(i) // == 2**i
+	}
+	for _, v := range pow3 {
+		fmt.Println(v)
+	}
+
 }
 
 func main() {

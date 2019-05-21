@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-func main() {
+func array1() {
+	fmt.Println("=== array1 ===")
 	var b [3]string
 	b[1] = "ho"
 	fmt.Println(b)
@@ -25,4 +26,21 @@ func main() {
 
 	// i := 7
 	// fmt.Println(primes[i]) // panic: runtime error: index out of range
+}
+
+func arrayModify(arr []int) {
+	arr[0] = 8
+}
+
+func array2() {
+	fmt.Println("=== array2 ===")
+	arr := []int{1, 2, 3}
+	fmt.Println(arr)
+	arrayModify(arr)
+	fmt.Println(arr)
+}
+
+func main() {
+	array1()
+	array2()
 }
