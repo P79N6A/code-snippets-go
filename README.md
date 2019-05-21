@@ -14,4 +14,4 @@ Python 的那个感觉挺好的，所以这次从一开始学 Go 就开始收集
 - [Where to Go from here...](https://tour.golang.org/concurrency/11)
 - [Go语言101 - Go语言101](https://gfw.go101.org/article/101.html)
 - [Go 语言教程 | 菜鸟教程](https://www.runoob.com/go/go-tutorial.html)
-- [Go语言入门教程，Golang入门教程（非常详细）](http://c.biancheng.net/golang/)
+- [Go语言入门教程，Golang入门教程](http://c.biancheng.net/golang/)
