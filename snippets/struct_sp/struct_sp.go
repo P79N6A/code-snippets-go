@@ -27,6 +27,27 @@ func vertex1() {
 	fmt.Println(v3)
 }
 
+type T1 struct {
+	f1 string
+	f2 string
+}
+
+type T2 struct {
+	T1
+	f2     int64
+	f3, f4 float64
+}
+
+func struct1() {
+	utils.PrintFuncName()
+	t := T2{T1{"foo", "bar"}, 1, 2, 3}
+	fmt.Println(t.f1)
+	fmt.Println(t.T1.f1)
+	fmt.Println(t.f2, t.f3)
+	fmt.Println(t)
+}
+
 func main() {
 	vertex1()
+	struct1()
 }
